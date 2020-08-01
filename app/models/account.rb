@@ -5,6 +5,8 @@ class Account < ApplicationRecord
 
   attr_accessor :password
 
+  attribute :expansion, :integer, default: 2
+
   validates :username, uniqueness: { case_sensitive: true }
 
   before_create :generate_sha_pass_hash, if: :valid?
