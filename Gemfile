@@ -9,7 +9,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mysql2', '>= 0.4.4'
 gem 'puma'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-# gem 'rack-cors'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'awesome_print'
