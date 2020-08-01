@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
     @account = Account.new(account_params)
     return head :ok if @account.save
 
-    render json: @account.errors, status: :unprocessable_entity
+    render json: @account.errors.full_messages, status: :unprocessable_entity
   end
 
   private
