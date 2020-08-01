@@ -3,7 +3,7 @@
 class AccountsController < ApplicationController
   def create
     @account = Account.new(account_params)
-    return render status: :ok if @account.save
+    return head :ok if @account.save
 
     render json: @account.errors, status: :unprocessable_entity
   end
