@@ -7,6 +7,7 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/bundler'
 require 'capistrano/passenger'
 require 'capistrano/rvm'
+require 'capistrano/rails/logs'
 
 set :rvm_type, :mnr # Defaults to: :auto
 set :rvm_ruby_version, '2.6.6' # Defaults to: 'default'
