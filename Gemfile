@@ -16,9 +16,9 @@ gem 'rack-cors'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 group :development, :test do
-  gem 'puma'
   gem 'awesome_print'
   gem 'pry'
+  gem 'puma'
   gem 'rubocop'
 end
 

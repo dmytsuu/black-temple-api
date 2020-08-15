@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: black_temple_production
+  database: tbcrealmd
   username: mangos
   password: mangos
