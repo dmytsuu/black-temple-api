@@ -12,11 +12,11 @@ gem 'capistrano-rails', '~> 1.4'
 gem 'capistrano-rails-logs-tail'
 gem 'capistrano-rvm'
 gem 'mysql2', '>= 0.4.4'
-gem 'puma'
 gem 'rack-cors'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 group :development, :test do
+  gem 'puma'
   gem 'awesome_print'
   gem 'pry'
   gem 'rubocop'
