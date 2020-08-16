@@ -8,7 +8,7 @@ class Account < ApplicationRecord
   attribute :expansion, :integer, default: 2
 
   validates :username, :password, presence: true
-  validates :username, uniqueness: { case_sensitive: true }, format: { with: /\A[a-zA-Z0-9]+\Z/ }
+  validates :username, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
   before_create :generate_sha_pass_hash, if: :valid?
 
