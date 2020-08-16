@@ -37,3 +37,5 @@ module BlackTemple
     config.api_only = true
   end
 end
+
+Rails.application.credentials.config.each { |key, value| ENV[key.to_s.upcase] ||= value }

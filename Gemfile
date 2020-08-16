@@ -28,4 +28,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'passenger', '~> 6.0', group: :production
+group :production do
+  gem 'bugno', '~> 0.1.8'
+  gem 'passenger', '~> 6.0'
+end
