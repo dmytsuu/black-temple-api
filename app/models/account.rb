@@ -12,7 +12,14 @@ class Account < ApplicationRecord
 
   before_create :generate_sha_pass_hash, if: :valid?
 
-  def generate_sha_pass_hash
-    self.sha_pass_hash = Digest::SHA1.hexdigest([username.upcase, password.upcase].join(':'))
+  def update_password(new_password)
+    generate_sha_pass_hash(new_password)
+    save
+  end
+
+  private
+
+  def generate_sha_pass_hash(new_password = password)
+    self.sha_pass_hash = Digest::SHA1.hexdigest([username.upcase, new_password.upcase].join(':'))
   end
 end
